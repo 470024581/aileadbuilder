@@ -65,7 +65,7 @@ An intelligent lead management and LinkedIn message generation platform built wi
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd aileadbuilder-1
+   cd aileadbuilder
    ```
 
 2. **Install dependencies**
@@ -74,8 +74,12 @@ An intelligent lead management and LinkedIn message generation platform built wi
    ```
 
 3. **Environment Configuration**
-   Create a `.env.local` file in the root directory:
+   Create a `.env` file in the root directory:
    ```env
+   # APP Configuration
+   NEXT_PUBLIC_APP_NAME="AI Lead Builder"
+   NEXT_PUBLIC_APP_DESCRIPTION="AI-powered outreach workflow tool"
+   
    # Supabase Configuration
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
