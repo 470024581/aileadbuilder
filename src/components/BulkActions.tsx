@@ -158,7 +158,6 @@ export function BulkActions({
       Role: lead.role,
       Company: lead.company,
       'LinkedIn URL': lead.linkedin_url || '',
-      Status: lead.status,
       'Created Date': new Date(lead.created_at).toLocaleDateString(),
       'Updated Date': new Date(lead.updated_at).toLocaleDateString()
     }))
@@ -234,18 +233,8 @@ export function BulkActions({
                       className="text-sm flex-1 cursor-pointer"
                     >
                       <div className="font-medium">{lead.name}</div>
-                      <div className="text-gray-500 text-xs">{lead.company}</div>
+                      <div className="text-gray-500 text-xs">{lead.role} at {lead.company}</div>
                     </label>
-                    <Badge 
-                      variant="outline" 
-                      className={
-                        lead.status === 'sent' ? 'bg-green-50 text-green-700' :
-                        lead.status === 'approved' ? 'bg-yellow-50 text-yellow-700' :
-                        'bg-gray-50 text-gray-700'
-                      }
-                    >
-                      {lead.status}
-                    </Badge>
                   </div>
                 ))}
               </div>
